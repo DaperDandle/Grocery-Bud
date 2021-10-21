@@ -52,6 +52,7 @@ function App() {
     //  no items are being edited and the new item is added to the list
     else {
       showAlert(true, "success", "Item added to the list");
+      // create an id from the current date and time to get unique value
       const newItem = { id: new Date().getTime().toString(), title: name };
       setList([...list, newItem]);
       setName("");
